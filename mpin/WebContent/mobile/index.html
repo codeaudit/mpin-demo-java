@@ -1,0 +1,106 @@
+<!--
+Copyright 2014 CertiVox UK Ltd, All Rights Reserved.
+
+The CertiVox M-Pin Client and Server Libraries are free software: you can
+redistribute it and/or modify it under the terms of the BSD 3-Clause
+License - http://opensource.org/licenses/BSD-3-Clause
+
+For full details regarding our CertiVox terms of service please refer to
+the following links:
+
+  * Our Terms and Conditions -
+    http://www.certivox.com/about-certivox/terms-and-conditions/
+  
+  * Our Security and Privacy -
+    http://www.certivox.com/about-certivox/security-privacy/
+
+  * Our Statement of Position and Our Promise on Software Patents -
+    http://www.certivox.com/about-certivox/patents/
+
+   Certivox JavaScript M-Pin Authentication Functions
+
+   Provides these functions:
+   calculateMPinToken     Calculates the MPin Token 
+   local_entropy          Gets an entropy value from the client machine
+   randomX                Calculates a random 254 bit value
+   addShares              Add two points on the curve that are originally in hex format
+   pass1Request           Form the JSON request for pass one of the M-Pin protocol
+   pass2Request           Form the JSON request for pass two of the M-Pin protocol
+-->
+<!doctype html>
+<!-- <html lang="en"  manifest="mpin.appcache"> -->
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MPIN</title>
+	<meta name="description" content="">
+	<meta name="HandheldFriendly" content="True">
+	<meta name="MobileOptimized" content="320">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+	<meta name="apple-touch-fullscreen" content="yes">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline'">
+	<link rel="apple-touch-icon" href="resources/templates/turquoise/icons/Icon@2x.png" />
+	<meta http-equiv="cleartype" content="on">
+	<link href='//fonts.googleapis.com/css?family=Open+Sans:400italic,400' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="rotateLock">
+		<img src="resources/templates/turquoise/img/rotate.svg" alt="">
+		<h1>Rotate Device to Portrait</h1>
+	</div>
+	<div id="mpinContainer">
+
+		<div id="mpinHolder">
+
+			<!-- Master container to inherit the flexibility position -->
+			<div id="mpinMaster" ontouchstart="">
+			
+			<!-- Append here -->
+
+			</div>
+
+			
+			<help>
+			  
+			  <div id="helpContainer">
+
+
+			  </div>
+
+			</help>
+
+			<!-- Helphub -->
+
+			<helpHub></helpHub>
+
+		</div>
+	</div>
+
+	<!-- Load JS files -->
+	
+	<script src="js/main.js"></script>
+	<!-- Initialize MPIN -->
+
+	<script>
+	(function() {
+		new mpin("mpinMaster", {
+				clientSettingsURL: window.location.origin + "/mpin/rps/clientSettings",
+				// useWebSocket: true,
+				emailCheckRegex: /^(([^<>()[\]\.,;:\s@"]+(\.[^<>()[\]\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
+				onSuccessLogin: function() {
+					alert(" :: on SUCCESS LOGIN ::");
+				},
+				setDeviceName: true,
+				// requestOTP: "1"
+				
+				
+			});
+		})();
+
+	</script>
+
+
+</body>
+</html>

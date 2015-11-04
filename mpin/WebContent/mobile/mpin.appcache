@@ -1,0 +1,21 @@
+CACHE MANIFEST
+# v0.1 Jordan - Apr 11 2014
+# Timestamp Wed Jul 08 2015 17:11:47
+# Explicitly cached 'master entries'.
+
+CACHE:
+css/main.css
+
+js/handlebars.runtime.min.js
+js/mpin-all.min.js
+js/main.js
+
+#Cache images
+
+resources/templates/turquoise/img/m-pin-header-logo.svg
+resources/templates/turquoise/img/byCertivox.svg
+resources/templates/turquoise/img/home.svg
+resources/templates/turquoise/img/phone.svg
+
+NETWORK:
+*

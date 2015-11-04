@@ -8,9 +8,9 @@
 ## Setup
 
 In order for this demo to work correctly, the M-Pin Core services should be installed on the same machine on which Tomcat and this demo are running.
-Typical M-Pin Core insallation deploys M-Pin Server (sometimes refered as RPS) and a demo Relying Party Application (RPA), implemented in Python.
+Typical M-Pin Core installation deploys M-Pin Server (sometimes referred as RPS) and a demo Relying Party Application (RPA), implemented in Python.
 The M-Pin Server should and listens only to the loopback interface - 127.0.0.1:8011. The RPA is the service that is open to external connections and it proxies requests to the RPS, or makes "internal" requests to the private RPS API.
-In order to run M-Pin Core without the included Pyhton Demo, the following command should be executed:
+In order to run M-Pin Core without the included Python Demo, the following command should be executed:
 ```
 > cd <mpin-core-install-folder>
 > sudo ./mpin stop all
@@ -46,11 +46,11 @@ Configured like this, this Demo App will not verify the user identities by sendi
 In order to enable identity verification via sending e-mail, the following parameters should be set:
 * `VERIFY_LINK_BASE_URL` - the base URL for the verification link sent in the e-mail. Should be set with the accessible address of the server on which the Demo App is running.
 * `FORCE_ACTIVATE` - enable/disable user "force-activation". Set to `false`.
-* `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME` and `SMTP_PASSWORD` - address and credentials of the SMTP server that should be used to send verification e-mails. Unremark and set them as needed.
+* `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME` and `SMTP_PASSWORD` - address and credentials of the SMTP server that should be used to send verification e-mails. Un-remark and set them as needed.
 
 ## Getting the M-Pin Mobile App working
 
-When you have installed the M-Pin Mpbile App, you should go to the Configurations List and define a new configuration.
+When you have installed the M-Pin Mobile App, you should go to the Configurations List and define a new configuration.
 Assuming that your Tomcat listens on _\<tomcat-server-address\>:8080_ , the settings should be:
 * _M-Pin Server_: \<tomcat-server-address\>:8080/mpin
 * _RPS Prefix_: (leave empty, as it is)
