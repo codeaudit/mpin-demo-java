@@ -16,7 +16,7 @@ In order to run M-Pin Core without the included Pyhton Demo, the following comma
 > sudo ./mpin stop all
 > sudo ./mpin start
 ```
-**NOTE** that the default for _<mpin-core-install-folder>_ is `/opt/mpin`
+**NOTE** that the default for _\<mpin-core-install-folder\>_ is `/opt/mpin`
 
 ## Configuration
 
@@ -51,7 +51,7 @@ In order to enable identity verification via sending e-mail, the following param
 ## Getting the M-Pin Mobile App working
 
 When you have installed the M-Pin Mpbile App, you should go to the Configurations List and define a new configuration.
-Assuming that your Tomcat listens on _<tomcat-server-address>:8080_, the settings should be:
-M-Pin Server: <tomcat-server-address>:8080/mpin
-RPS Prefix: (leave empty, as it is)
-Service Type: Login to Online Session
+Assuming that your Tomcat listens on _\<tomcat-server-address\>:8080_ , the settings should be:
+_M-Pin Server_: \<tomcat-server-address\>:8080/mpin
+_RPS Prefix_: (leave empty, as it is)
+_Service Type_: Login to Online Session
