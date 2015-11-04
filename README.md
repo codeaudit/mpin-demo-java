@@ -44,14 +44,14 @@ FORCE_ACTIVATE=true
 ```
 Configured like this, this Demo App will not verify the user identities by sending a verification e-mail, but will "force-activate" them.
 In order to enable identity verification via sending e-mail, the following parameters should be set:
-`VERIFY_LINK_BASE_URL` - the base URL for the verification link sent in the e-mail. Should be set with the accessible address of the server on which the Demo App is running.
-`FORCE_ACTIVATE` - enable/disable user "force-activation". Set to `false`.
-`SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME` and `SMTP_PASSWORD` - address and credentials of the SMTP server that should be used to send verification e-mails. Unremark and set them as needed.
+* `VERIFY_LINK_BASE_URL` - the base URL for the verification link sent in the e-mail. Should be set with the accessible address of the server on which the Demo App is running.
+* `FORCE_ACTIVATE` - enable/disable user "force-activation". Set to `false`.
+* `SMTP_HOST`, `SMTP_PORT`, `SMTP_USERNAME` and `SMTP_PASSWORD` - address and credentials of the SMTP server that should be used to send verification e-mails. Unremark and set them as needed.
 
 ## Getting the M-Pin Mobile App working
 
 When you have installed the M-Pin Mpbile App, you should go to the Configurations List and define a new configuration.
 Assuming that your Tomcat listens on _\<tomcat-server-address\>:8080_ , the settings should be:
-_M-Pin Server_: \<tomcat-server-address\>:8080/mpin
-_RPS Prefix_: (leave empty, as it is)
-_Service Type_: Login to Online Session
+* _M-Pin Server_: \<tomcat-server-address\>:8080/mpin
+* _RPS Prefix_: (leave empty, as it is)
+* _Service Type_: Login to Online Session
