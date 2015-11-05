@@ -42,7 +42,7 @@ FORCE_ACTIVATE=true
 #SMTP_USERNAME=
 #SMTP_PASSWORD=
 ```
-Configured like this, this Demo App will not verify the user identities by sending a verification e-mail, but will "force-activate" them.
+Configured like this, the Demo App will not verify the user identities by sending a verification e-mail, but will "force-activate" them.
 In order to enable identity verification via sending e-mail, the following parameters should be set:
 * `VERIFY_LINK_BASE_URL` - the base URL for the verification link sent in the e-mail. Should be set with the accessible address of the server on which the Demo App is running.
 * `FORCE_ACTIVATE` - enable/disable user "force-activation". Set to `false`.
